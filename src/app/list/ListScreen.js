@@ -2,6 +2,7 @@
 
 TO DO: 
 
+styles and positioning
 */
 
 import React, { Component } from 'react';

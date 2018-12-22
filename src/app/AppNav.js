@@ -1,4 +1,4 @@
-import { StackNavigator, DrawerNavigator } from 'react-navigation';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 
 import DrawerContainer from './DrawerContainer';
 
@@ -8,7 +8,7 @@ import ListScreen from './list/ListScreen';
 import SeasonScreen from './season/SeasonScreen';
 import SettingsScreen from './settings/SettingsScreen';
 
-const DrawerNav = DrawerNavigator(
+const DrawerNav = createDrawerNavigator(
     {
         Home: {
             screen: HomeScreen,
@@ -32,7 +32,7 @@ const DrawerNav = DrawerNavigator(
     }
 );
 
-const StackNav = StackNavigator(
+const StackNav = createStackNavigator(
     {
         Home: {
             screen: HomeScreen,
@@ -59,7 +59,7 @@ const StackNav = StackNavigator(
     }
 );
 
-const AppNav = StackNavigator(
+const AppNav = createStackNavigator(
     {
         Stack: {
             screen: StackNav,
