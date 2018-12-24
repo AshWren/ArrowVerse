@@ -14,6 +14,8 @@ fix colors and positions
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
+import Icon from 'react-native-vector-icons/Ionicons'
+
 import NavigationService from '../NavigationService';
 
 import BaseText from '../shared/theme/BaseText';
@@ -27,27 +29,37 @@ export default class HomeScreen extends Component {
     render() {
         return (
 
-            <View style={styles.container}>
+            <TouchableHighlight 
+                onPress={this._onPressButton} 
+                underlayColor='white'
+                style={styles.container}
+            >
                 <View style={styles.btnContainer}>
                     <View style={styles.bookContainer}>
                         <Text>
                             Holder for The Book
                         </Text>    
                     </View>
-                    <TouchableHighlight
-                        onPress={this._onPressButton} 
-                        underlayColor='white'
-                        style={styles.textContainer}
-                    >
-                            <BaseText>
-                                <Text style={styles.text}>
-                                    Cross off The List
-                                </Text>
-                            </BaseText>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.text}>
+                            Cross the next one 
+                        </Text>
+                        <View style={styles.bottomText}>
 
-                    </TouchableHighlight>
+                        <Text style={styles.text}>
+                            off The List
+                            
+                        </Text>
+                        <Icon 
+                            name='md-arrow-forward' 
+                            color='#f5f7f9'
+                            size={24}
+                            
+                        />
+                        </View>
+                    </View>
                 </View>
-            </View>
+            </TouchableHighlight>
         )
     }
 }
@@ -55,7 +67,7 @@ export default class HomeScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f5f5f6',
+        backgroundColor: '#051b2a',
         justifyContent: 'center',
         flexDirection: 'column',
         alignItems: 'stretch',
@@ -65,16 +77,29 @@ const styles = StyleSheet.create({
         padding: 30,
     },
     bookContainer: {
-        height: 250,
-        
-        backgroundColor: 'gray',
+        height: 300,
+        backgroundColor: '#2A6790',
     },
     textContainer: {
         height: 50,
-        backgroundColor: 'green',
         margin: 10,
     },
+    bottomText: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'center',
+    },  
     text: {
-        height: 36,
+        fontSize: 20,
+        color: '#f5f7f9',
+        fontWeight: 'bold',
+        fontFamily: 'Roboto',
+        textAlign: 'center',
+        margin: 5,
+        marginRight: 10,
     },
+    icon: {
+        margin: 5
+    },  
 });

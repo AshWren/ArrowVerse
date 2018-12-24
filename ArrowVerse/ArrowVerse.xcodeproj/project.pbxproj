@@ -14,6 +14,9 @@
 		2F30563F21C5692000935380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F30563D21C5692000935380 /* LaunchScreen.storyboard */; };
 		2F30564A21C5692000935380 /* ArrowVerseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30564921C5692000935380 /* ArrowVerseTests.swift */; };
 		2F30565521C5692000935380 /* ArrowVerseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F30565421C5692000935380 /* ArrowVerseUITests.swift */; };
+		2F30566221D04E1700935380 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F30564021C5692000935380 /* Info.plist */; };
+		2F30566321D04E2200935380 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F30564021C5692000935380 /* Info.plist */; };
+		2F30566421D04E2300935380 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F30564021C5692000935380 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F30566221D04E1700935380 /* Info.plist in Resources */,
 				2F30563F21C5692000935380 /* LaunchScreen.storyboard in Resources */,
 				2F30563C21C5692000935380 /* Assets.xcassets in Resources */,
 				2F30563A21C5691F00935380 /* Main.storyboard in Resources */,
@@ -239,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F30566321D04E2200935380 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F30566421D04E2300935380 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
