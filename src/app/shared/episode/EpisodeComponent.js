@@ -1,47 +1,108 @@
 /*  
 
 TO DO: 
-
+get slider reversed
 */
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { 
+    StyleSheet, 
+    Switch,
+    Text, 
+    TouchableOpacity, 
+    View 
+} from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import { CheckBox } from 'react-native-elements';
+import EpisodeDropDownComponent from './DropDown';
+import { FlatList } from 'react-native-gesture-handler';
 
 export default class EpisodeComponent extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            isHidden: false,
+        };
+    }
+
     render() {
         return (
+            <View style={styles.card}>
             <View style={styles.container}>
-                <View style={styles.checkbox}>
-                    <CheckBox 
-                        
-                    />
-                </View>
-                <View style={styles.showIcon}>
-                    <Text>0</Text>
-                </View>
-                <View style={styles.textContainer}>
-                    <Text style={styles.titleText}>
-                        Episode Title
-                    </Text>
-                    <View style={styles.bottomTextContainer}>
-                        <Text style={styles.seasonText}>
-                            Season XX
-                        </Text>
-                        <Text style={styles.episodeText}>
-                            Episode XX
-                        </Text>
+                
+                    <View style={styles.checkbox}>
+                        <CheckBox 
+                            
+                        />
                     </View>
-                </View>
-                <View style={styles.expandBtnContainer}>
-                <Icon.Button 
-                    name='ios-arrow-down'
-                    color='#f5f7f9'
-                    size={24}
-                    backgroundColor='transparent'
-                />
+                    <View style={styles.showIcon}>
+                        <Text>0</Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Text style={styles.titleText}>
+                            Episode Title
+                        </Text>
+                        <View style={styles.bottomTextContainer}>
+                            <Text style={styles.seasonText}>
+                                Season XX
+                            </Text>
+                            <Text style={styles.episodeText}>
+                                Episode XX
+                            </Text>
+                        </View>
+                    </View>
+            
+                    <EpisodeDropDownComponent>
+                        <Switch 
+                            
+                            onValueChange={
+                                value => this.setState({
+                                    isHidden: value,
+                                })}
+                            value={
+                                this.state.isHidden
+                            }
+                            style={{transform: [
+                                {
+                                scaleX: .5,
+                                },
+                                {
+                                scaleY: .5,
+                            }],}}
+                        />
+                    </EpisodeDropDownComponent>
+             
+                
+                
+            </View>
+            <View >
+                    <EpisodeDropDownComponent 
+                        hide={this.state.isHidden}
+                    >
+                        <View style={styles.containerDropDown}>
+                            <View style={styles.row1}>
+                                <View style={styles.multiverse}>
+                                    <Text>Multiverse Episode:</Text>
+                                    <Text>XXX</Text>
+                                </View>
+                                <View style={styles.airDate}>
+                                    <Text>Air Date:</Text>
+                                    <Text>XX.XX.XX</Text>
+                                </View>
+                            </View>
+                            <View style={styles.row2}>
+                                {/* <View style={styles.showTitle}> */}
+                                    <Text>Arrow</Text>
+                                {/* </View> */}
+                                {/* <View style={styles.showSynopsis}> */}
+                                    <Text>Synopsis: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est eopksio laborum. Sed ut perspiciatis unde omnis istpoe natus error sit voluptatem accusantium doloremque eopsloi laudantium, </Text>
+                                {/* </View> */}
+                            </View>
+                        </View>
+                            
+                        
+                    </EpisodeDropDownComponent>
                 </View>
             </View>
         );
@@ -50,9 +111,11 @@ export default class EpisodeComponent extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#004928',
+        backgroundColor: '#00351D',
         height: 75,
-        margin: 10,
+        marginTop: 10,
+        marginLeft: 10,
+        marginRight: 10,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -82,7 +145,41 @@ const styles = StyleSheet.create({
     episodeText: {
         color: '#f5f7f9',
     },
-    
+    containerDropDown: {
+        backgroundColor: '#004928',
+        height: 300,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 10,
+        marginLeft: 10,
+        marginRight: 10,
+    },
+    row1: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        height: 75,
+        top: 0,
+        alignSelf: 'flex-start',
+        margin: 10,
+    },
+    multiverse: {
+        width: '35%',
+    },
+    airDate: {
+        width: '25%',
+    },
+    row2: {
+        flexDirection: 'column',
+        width: '100%',
+        
+        margin: 10,
+    },
+    showTitle: {
 
+    },
+    showSynopsis: {
+
+    },
 });
 
