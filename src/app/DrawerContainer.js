@@ -38,6 +38,16 @@ export default class DrawerContainer extends Component {
                             </Text>            
                         </View>
                     </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.linkContainer}
+                        onPress={() => NavigationService.navigate('Library')}
+                    >
+                        <View style={styles.textContainer}>
+                            <Text style={styles.text}>
+                                Library
+                            </Text>            
+                        </View>
+                    </TouchableOpacity>
                 </ScrollView>
             </View>
         )

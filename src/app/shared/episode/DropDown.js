@@ -6,11 +6,11 @@ reverse the slider
 */
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { 
     Text, 
     View 
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 const DropDownComponent = (props) => {
     const { children, show } = props;
