@@ -15,14 +15,14 @@ import {
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import { CheckBox } from 'react-native-elements';
-import EpisodeDropDownComponent from './DropDown';
+import DropDownComponent from './DropDown';
 import { FlatList } from 'react-native-gesture-handler';
 
 export default class EpisodeComponent extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isHidden: false,
+            isShown: false,
         };
     }
 
@@ -53,15 +53,14 @@ export default class EpisodeComponent extends Component {
                         </View>
                     </View>
             
-                    <EpisodeDropDownComponent>
                         <Switch 
                             
                             onValueChange={
                                 value => this.setState({
-                                    isHidden: value,
+                                    isShown: value,
                                 })}
                             value={
-                                this.state.isHidden
+                                this.state.isShown
                             }
                             style={{transform: [
                                 {
@@ -71,14 +70,13 @@ export default class EpisodeComponent extends Component {
                                 scaleY: .5,
                             }],}}
                         />
-                    </EpisodeDropDownComponent>
              
                 
                 
             </View>
             <View >
-                    <EpisodeDropDownComponent 
-                        hide={this.state.isHidden}
+                    <DropDownComponent 
+                        show={this.state.isShown}
                     >
                         <View style={styles.containerDropDown}>
                             <View style={styles.row1}>
@@ -102,7 +100,7 @@ export default class EpisodeComponent extends Component {
                         </View>
                             
                         
-                    </EpisodeDropDownComponent>
+                    </DropDownComponent>
                 </View>
             </View>
         );

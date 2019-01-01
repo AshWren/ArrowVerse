@@ -12,19 +12,22 @@ import {
     View 
 } from 'react-native';
 
-const EpisodeDropDownComponent = (props) => {
-    const { children, hide } = props;
-    if (hide) {
-        return null;
+const DropDownComponent = (props) => {
+    const { children, show } = props;
+
+
+    if (show) {
+        return (
+        
+            <View {...this.props} >
+                { children }
+            </View>
+        )
     }
-    return (
-        <View {...this.props} >
-            { children }
-        </View>
-    );
+    return null;
 };
 
-EpisodeDropDownComponent.propTypes = {
+DropDownComponent.propTypes = {
     children: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.element,
@@ -39,4 +42,4 @@ EpisodeDropDownComponent.propTypes = {
 };
 
 
-export default EpisodeDropDownComponent;
+export default DropDownComponent;
