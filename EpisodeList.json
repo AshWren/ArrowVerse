@@ -1,0 +1,125 @@
+{
+    "shows": [
+        {
+            "ShowName": "Arrow",
+            "ShowIcon": "",
+            "SeasonList": [
+                {
+                    "SeasonNumber": 1,
+                    "YearNumber": 1,
+                    "EpisodeList": [
+                        {
+                            "title": "AS01E01",
+                            "episode": 1,
+                            "showNum": 1,
+                            "universeNum": 1,
+                            "airDate": "airDate",
+                            "synopsis": "",
+                            "watched": false,
+                            "rating": 0
+                        },
+                        {
+                            "title": "AS01E02",
+                            "episode": 2,
+                            "showNum": 2,
+                            "universeNum": 2,
+                            "airDate": "airDate",
+                            "synopsis": "",
+                            "watched": false,
+                            "rating": 0
+                        },
+                        {
+                            "title": "AS01E03",
+                            "episode": 3,
+                            "showNum": 3,
+                            "universeNum": 3,
+                            "airDate": "airDate",
+                            "synopsis": "",
+                            "watched": false,
+                            "rating": 0
+                        }
+                    ]
+                },
+                {
+                    "SeasonNumber": 2,
+                    "YearNumber": 2,
+                    "EpisodeList": [
+                        {
+                            "title": "AS02E01",
+                            "episode": 1,
+                            "showNum": 4,
+                            "universeNum": 4,
+                            "airDate": "airDate",
+                            "synopsis": "",
+                            "watched": false,
+                            "rating": 0
+                        },
+                        {
+                            "title": "AS02E02",
+                            "episode": 2,
+                            "showNum": 5,
+                            "universeNum": 6,
+                            "airDate": "airDate",
+                            "synopsis": "",
+                            "watched": false,
+                            "rating": 0
+                        },
+                        {
+                            "title": "AS02E03",
+                            "episode": 3,
+                            "showNum": 6,
+                            "universeNum": 8,
+                            "airDate": "airDate",
+                            "synopsis": "",
+                            "watched": false,
+                            "rating": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ShowName": "Flash",
+            "ShowIcon": "",
+            "SeasonList": [
+                {
+                    "SeasonNumber": 1,
+                    "YearNumber": 2,
+                    "EpisodeList": [
+                        {
+                            "title": "FS01E01",
+                            "episode": 1,
+                            "showNum": 1,
+                            "universeNum": 5,
+                            "airDate": "airDate",
+                            "synopsis": "",
+                            "watched": false,
+                            "rating": 0
+                        },
+                        {
+                            "title": "FS01E02",
+                            "episode": 2,
+                            "showNum": 2,
+                            "universeNum": 7,
+                            "airDate": "airDate",
+                            "synopsis": "",
+                            "watched": false,
+                            "rating": 0
+                        },
+                        {
+                            "title": "FS01E03",
+                            "episode": 3,
+                            "showNum": 3,
+                            "universeNum": 9,
+                            "airDate": "airDate",
+                            "synopsis": "",
+                            "watched": false,
+                            "rating": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
