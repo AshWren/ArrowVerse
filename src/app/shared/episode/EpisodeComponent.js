@@ -1,7 +1,7 @@
 /*  
 
 TO DO: 
-get slider reversed
+
 */
 
 import React, { Component } from 'react';

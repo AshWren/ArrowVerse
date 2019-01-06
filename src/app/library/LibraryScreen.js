@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
 
+
 import Header from '../shared/theme/Header';
 
 class LibraryScreen extends Component {
@@ -15,7 +16,11 @@ class LibraryScreen extends Component {
         return (
             <View>
 
-                <Header title={'Library'} />
+                <Header 
+                    title={'Library'} 
+                    onMenuPress={this.props.navigation}
+                />
+
                 <Text>LibraryScreen Works!</Text>
             </View>
         );

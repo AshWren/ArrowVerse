@@ -9,11 +9,15 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
 
+
+import NavigationService from '../../NavigationService';
+
 import Icon from 'react-native-vector-icons/Ionicons';
 import { TabHeading } from 'native-base';
 
 TabHeading.propTypes = {
-    title: PropTypes.string
+    title: PropTypes.string,
+    onMenuPress: PropTypes.func,
 }
 
 export default class Header extends Component {
@@ -24,7 +28,7 @@ export default class Header extends Component {
             <View style={styles.container}>
                 <View style={styles.headerContainer}>
                     <Icon.Button
-                        onPress={() => this.props.navigation.openDrawer()} 
+                        onPress={() => this.props.onMenuPress.openDrawer()} 
                         name='ios-menu'
                         color='#f5f7f9'
                         size={24}
