@@ -29,7 +29,10 @@ EpisodeList = require('../assets/data/EpisodeList.json');
 
     getAllEpisodesByYear(yearNum) {
 
+        const showList = [];
+        
         const allEpisodes = [];
+
 
         const shows = this.EpisodeList.shows;
     
@@ -42,14 +45,16 @@ EpisodeList = require('../assets/data/EpisodeList.json');
             
             console.log('yearSeason', yearSeason);
 
-            for (j = 0; j < yearSeason[0].length; j++) {
+            const episodes = yearSeason[0].EpisodeList;
 
-                const episode = yearSeason[0].EpisodeList[j];
-                episode.showName = shows[i].showName;
-                episode.showSeason = yearSeason[0].SeasonNumber;
-                allEpisodes.push(episode);
-            }
+            allEpisodes.push(episodes);
+
+            console.log('episodes', episodes);
+            showList.push(yearSeason);
+
         }
+
+        console.log('showList',showList);
     
         console.log("allEpisodes", allEpisodes);
 

@@ -14,14 +14,12 @@ import {
 
 import Header from '../shared/theme/Header';
 import ShowSorter from '../../services/ShowSorter';
-import EpisodeSorter from '../../services/EpisodeSorter';
 
 class LibraryScreen extends Component {
     render() {
 
     // const ArrowShow = ShowSorter.getAllEpisodesByShow("Arrow");
 
-    const ArrowSeasonShows = EpisodeSorter.getAllEpisodesByYear(2)
    
     console.log(ArrowSeasonShows);
     
