@@ -25,7 +25,7 @@ export default class Header extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+      
                 <View style={styles.headerContainer}>
                     <Icon.Button
                         onPress={() => this.props.onMenuPress.openDrawer()} 
@@ -44,7 +44,7 @@ export default class Header extends Component {
                         backgroundColor='transparent'
                     />
                 </View>
-            </View>
+    
         );
     }
 }

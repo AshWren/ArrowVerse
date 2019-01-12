@@ -6,29 +6,25 @@ TO DO:
 
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import {
-    createMaterialTopTabNavigator,
-    createStackNavigator,
-} from 'react-navigation'
+
 
 
 import Header from '../shared/theme/Header';
 
 
-class LibraryScreen extends Component {
+class YearScreen extends Component {
     render() {
         return (
             <View>
 
                 <Header 
-                    title={'Library'} 
-                    onMenuPress={this.props.navigation}
+                    title={'Years'} 
                 />
 
-                <Text>LibraryScreen Works!</Text>
+                <Text>YearScreen Works!</Text>
             </View>
         );
     }
 }
 
-export default LibraryScreen;
+export default YearScreen;

@@ -1,4 +1,8 @@
-import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import { 
+    createStackNavigator, 
+    createDrawerNavigator, 
+    createBottomTabNavigator,
+} from 'react-navigation';
 
 import DrawerContainer from './DrawerContainer';
 
@@ -7,6 +11,30 @@ import LibraryScreen from './library/LibraryScreen';
 import ListScreen from './list/ListScreen';
 import SeasonScreen from './season/SeasonScreen';
 import SettingsScreen from './settings/SettingsScreen';
+import ShowScreen from './library/ShowScreen';
+import YearScreen from './library/YearScreen';
+
+const LibraryTabs = createBottomTabNavigator(
+    {  
+        Show: {
+            screen: ShowScreen,
+            navigationOptions: {
+                title: "Shows",
+                initialRouteName: LibraryScreen,
+            }
+        },
+        Year: {
+            screen: YearScreen,
+            navigationOptions: {
+                title: "Multiverse",
+            }
+        }
+    },
+    {
+        headerMode: 'none',
+        initialRouteName: 'Show',
+    }
+);
 
 const DrawerNav = createDrawerNavigator(
     {
@@ -14,7 +42,7 @@ const DrawerNav = createDrawerNavigator(
             screen: HomeScreen,
         },
         Library: {
-            screen: LibraryScreen,
+            screen: LibraryTabs,
         },
         List: {
             screen: ListScreen,
@@ -31,6 +59,8 @@ const DrawerNav = createDrawerNavigator(
         contentComponent: DrawerContainer,
     }
 );
+
+
 
 const StackNav = createStackNavigator(
     {

@@ -19,7 +19,6 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import NavigationService from '../NavigationService';
 import EpisodeSorter from '../../services/EpisodeSorter';
 
-import BaseText from '../shared/theme/BaseText';
 
 export default class HomeScreen extends Component {
 
