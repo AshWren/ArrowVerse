@@ -11,28 +11,39 @@ import LibraryScreen from './library/LibraryScreen';
 import ListScreen from './list/ListScreen';
 import SeasonScreen from './season/SeasonScreen';
 import SettingsScreen from './settings/SettingsScreen';
+
 import ShowScreen from './library/ShowScreen';
 import YearScreen from './library/YearScreen';
+
 
 const LibraryTabs = createBottomTabNavigator(
     {  
         Show: {
             screen: ShowScreen,
             navigationOptions: {
-                title: "Shows",
-                initialRouteName: LibraryScreen,
+                title: "SHOWS",
             }
         },
         Year: {
             screen: YearScreen,
             navigationOptions: {
-                title: "Multiverse",
+                title: "MULTIVERSE",
             }
         }
     },
     {
         headerMode: 'none',
         initialRouteName: 'Show',
+        tabBarOptions: {
+            activeTintColor: '#fff', 
+            inactiveTintColor: '#2A6790',
+            activeBackgroundColor: '#2A6790', 
+            inactiveBackgroundColor: '#051B2A',
+            labelStyle: {
+                fontSize: 24,
+                paddingBottom: 10,
+            }
+        }
     }
 );
 
@@ -75,6 +86,7 @@ const StackNav = createStackNavigator(
         },
         Season: {
             screen: SeasonScreen,
+            
         },
         Settings: {
             screen: SettingsScreen,
@@ -96,7 +108,7 @@ const AppNav = createStackNavigator(
         },
         Drawer: {
             screen: DrawerNav,
-        }
+        },
     },
     {
         headerMode: 'none',

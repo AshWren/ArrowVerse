@@ -18,7 +18,8 @@ class ShowScreen extends Component {
             <View>
 
                 <Header 
-                    title={'Shows'} 
+                    title={'Library'} 
+                    onMenuPress={this.props.navigation}
                 />
 
                 <Text>ShowScreen Works!</Text>

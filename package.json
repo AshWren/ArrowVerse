@@ -6,7 +6,10 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "AVD": "cd scripts/ && start launchAVD",
-    "android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
+    "android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
+    "ios": "react-native run-ios",
+    "nuke": "npm run nuke:project",
+    "nuke:project": "scripts/nuke-project-dirs-interactive.js node_modules ios/Pods ios/build android/build"
   },
   "dependencies": {
     "native-base": "^2.8.1",

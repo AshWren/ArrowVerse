@@ -3,8 +3,6 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 
 import NavigationService from './NavigationService';
 
-import BaseText from './shared/theme/BaseText';
-
 export default class DrawerContainer extends Component {
 
     render() {

@@ -10,31 +10,9 @@ import {
     Text, 
     View 
 } from 'react-native';
-import {
-    createBottomTabNavigator,
-    createStackNavigator,
-} from 'react-navigation'
-
-import ShowScreen from './ShowScreen';
-import YearScreen from './YearScreen';
 
 import Header from '../shared/theme/Header';
 import CategoryComponent from '../shared/category/CategoryComponent';
-
-const LibraryTabs = createBottomTabNavigator({
-    Show: {
-        screen: ShowScreen,
-        navigationOptions: {
-            title: "Shows",
-        }
-    },
-    Year: {
-        screen: YearScreen,
-        navigationOptions: {
-            title: "Years",
-        }
-    }
-});
 
 
 
